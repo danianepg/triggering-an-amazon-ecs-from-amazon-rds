@@ -25,7 +25,23 @@ The database is an Aurora MySQL and it will need the permissions as described on
 
 We create a trigger on the table that holds the purchases of the employee. Check  **line 9**  for the piece of code that **calls the lambda.**
 
-<script src="https://gist.github.com/danianepg/407d554749c473caed76474b6613b98d.js"></script>
+```sql
+CREATE TRIGGER tasks_trigger
+  AFTER INSERT ON employee_purchases
+  FOR EACH ROW
+BEGIN
+	
+	SELECT NEW.taskType INTO @taskType;
+	
+	IF @taskType = 'BUY' THEN
+		CALL mysql.lambda_async('arn:aws:lambda:eu-west-1:<MY_ACCOUNT_ID>:function:triggerECSLambda', 
+     					 CONCAT('{"taskType" : "', @taskType, '" }')
+     		 ); 
+	
+	END	IF;
+  
+END
+```
 *Database trigger to call the lambda*
 
 # The Lambda Saga
