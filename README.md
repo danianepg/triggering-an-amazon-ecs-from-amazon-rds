@@ -230,4 +230,4 @@ By taking the approach described, it is possible to have a detached architecture
 
 _Special thanks to my DevOps Elson Neto that guided me through the AWS permissions maze and my colleague_ [_Diego Hordi_](https://levelup.gitconnected.com/@diego.hordi) _for suggesting some nice touches._
 
-Originally published on [Medium](https://medium.com/@danianepg/triggering-an-amazon-ecs-from-amazon-rds-5425b807fe82).
+Originally posted on my [Medium page](https://medium.com/@danianepg/triggering-an-amazon-ecs-from-amazon-rds-5425b807fe82).
