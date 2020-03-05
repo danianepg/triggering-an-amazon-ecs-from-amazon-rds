@@ -2,7 +2,7 @@
 
 ![](https://miro.medium.com/max/6643/0*aKFQ9twWf__p_8LY)
 
-Photo by  [chuttersnap](https://unsplash.com/@chuttersnap?utm_source=medium&utm_medium=referral)  on  [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
+*Photo by  [chuttersnap](https://unsplash.com/@chuttersnap?utm_source=medium&utm_medium=referral)  on  [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referr*al)*
 
 With a few lines of code, it’s possible to trigger an  **Amazon Elastic Container Service (ECS)** from an  **Amazon Relational Database Service (RDS)**. This article intends to describe how to do it and the struggles I had while trying to have it working.
 
@@ -25,9 +25,8 @@ The database is an Aurora MySQL and it will need the permissions as described on
 
 We create a trigger on the table that holds the purchases of the employee. Check  **line 9**  for the piece of code that **calls the lambda.**
 
-https://gist.github.com/danianepg/407d554749c473caed76474b6613b98d
-
-Database trigger to call the lambda
+<script src="https://gist.github.com/danianepg/407d554749c473caed76474b6613b98d.js"></script>
+*Database trigger to call the lambda*
 
 # The Lambda Saga
 
